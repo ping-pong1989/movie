@@ -60,7 +60,7 @@ class MovieClient:
 
     async def _fetch_page(self, client: httpx.AsyncClient, year: int, page: int) -> dict:
         params = {
-            "api_key": self._api_key,
+            "api_key": self.api_key,
             "primary_release_year": year,
             "sort_by": "popularity.desc",
             "page": page,
